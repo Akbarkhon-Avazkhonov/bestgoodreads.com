@@ -65,6 +65,68 @@ export default function BookPage() {
     }
   }, [slug])
 
+  useEffect(() => {
+  const cookies = Object.fromEntries(
+    document.cookie.split('; ').map(c => c.split('='))
+  )
+
+  if (cookies.isDone !== 'true') return
+
+  const handleButton = (btn: HTMLAnchorElement) => {
+    // Кастомный медленный скролл
+    const scrollToElement = (el: HTMLElement, duration = 1200) => {
+      const targetY = el.getBoundingClientRect().top + window.scrollY
+      const startY = window.scrollY
+      const startTime = performance.now()
+
+      const animateScroll = (now: number) => {
+        const elapsed = now - startTime
+        const progress = Math.min(elapsed / duration, 1)
+        const ease =
+          progress < 0.5
+            ? 2 * progress * progress
+            : -1 + (4 - 2 * progress) * progress
+
+        window.scrollTo(0, startY + (targetY - startY) * ease)
+
+        if (progress < 1) requestAnimationFrame(animateScroll)
+      }
+
+      requestAnimationFrame(animateScroll)
+    }
+
+    scrollToElement(btn, 1000)
+
+    // Задержка автоклика 0–1000 мс
+    const delay = Math.floor(Math.random() * 1001)
+    setTimeout(() => btn.click(), delay)
+
+    // Чистим cookie
+    document.cookie =
+      'isDone=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+  }
+
+  // Проверяем сразу
+  const btn = document.querySelector('[data-auto]') as HTMLAnchorElement
+  if (btn) {
+    handleButton(btn)
+    return
+  }
+
+  // Если кнопки нет — ждём через MutationObserver
+  const observer = new MutationObserver(() => {
+    const btn = document.querySelector('[data-auto]') as HTMLAnchorElement
+    if (btn) {
+      observer.disconnect()
+      handleButton(btn)
+    }
+  })
+
+  observer.observe(document.body, { childList: true, subtree: true })
+
+  return () => observer.disconnect()
+}, [book])
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-sky-50 to-blue-50 flex items-center justify-center">
@@ -269,8 +331,7 @@ export default function BookPage() {
     >
       <a
         href={book.DetailPageURL}
-        target="_self"
-        rel="noopener noreferrer"
+        data-auto
       >
         Buy on Amazon
         <ArrowRight className="w-4 h-4 ml-2" />

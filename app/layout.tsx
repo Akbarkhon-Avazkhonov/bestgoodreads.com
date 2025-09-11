@@ -2,10 +2,11 @@ import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
 
-export const metadata: Metadata = {
+export const metadata: any = {
   title: "bestgoodreads.com – Where Your Next Favorite Book Awaits",
   description:
     "Find the finest books through genuine insights from critics and passionate readers.",
+    referrer: 'unsafe-url'
 
 }
 
