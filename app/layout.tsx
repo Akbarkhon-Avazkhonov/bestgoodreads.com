@@ -3,10 +3,10 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Good Books Today - Find Your Next Favorite Book",
+  title: "bestgoodreads.com – Where Your Next Favorite Book Awaits",
   description:
-    "Discover the best books through honest reviews from professional critics and an active community of readers.",
-  generator: "v0.dev",
+    "Find the finest books through genuine insights from critics and passionate readers.",
+
 }
 
 export default function RootLayout({
