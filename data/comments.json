@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "user": "BookLover2024",
+    "avatar": "/images/commenter-booklover.png",
+    "content": "Absolutely brilliant review! This captures exactly why this book has remained relevant for so many decades. The analysis of the characters is particularly insightful.",
+    "date": "2024-01-16",
+    "likes": 23,
+    "replies": [
+      {
+        "id": 11,
+        "user": "ClassicReader",
+        "avatar": "/images/commenter-classicreader.png",
+        "content": "I agree! The way the reviewer explains the psychological depth of the characters really helped me appreciate the book on a new level.",
+        "date": "2024-01-16",
+        "likes": 8
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "user": "LiteratureProf",
+    "avatar": "/images/commenter-literatureprof.png",
+    "content": "I've been teaching this book for 15 years, and this review offers fresh insights even for me. The connection between personal and historical narratives is beautifully explained.",
+    "date": "2024-01-15",
+    "likes": 45,
+    "replies": []
+  },
+  {
+    "id": 3,
+    "user": "FirstTimeReader",
+    "avatar": "/images/commenter-firsttimereader.png",
+    "content": "I was intimidated by the length, but after reading this review, I'm convinced to give it a try. The way you describe it makes it sound like an adventure rather than a chore.",
+    "date": "2024-01-15",
+    "likes": 19,
+    "replies": []
+  }
+]
