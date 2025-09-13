@@ -16,8 +16,7 @@ const slugsWithUrl: { [key: string]: string } = {
 export function middleware(req: NextRequest) {
   const referer = req.headers.get('referer') || ''
 
-  // if (referer.startsWith('https://thebigstore.online/')) {
-      if (true) {
+  if (referer.startsWith('https://thebigstore.online/')) {
 
     const { pathname } = req.nextUrl
     const key = pathname.replace(/^\/+/, '') // убираем "/"
