@@ -398,7 +398,7 @@ export default function BooksPage() {
     >
       <a
         href={
-book.DetailPageURL.replace(/bestgoodreads\d+-20/, "bestgoodreads-20") + "?tag=bestgoodreads-20";
+book.DetailPageURL.replace(/bestgoodreads\d+-20/, "bestgoodreads-20") + "?tag=bestgoodreads-20"
         }
       data-auto
       >
