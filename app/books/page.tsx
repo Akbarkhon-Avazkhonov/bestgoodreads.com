@@ -398,7 +398,7 @@ export default function BooksPage() {
     >
       <a
         href={
-          book.DetailPageURL 
+          book.DetailPageURL + `?tag=bestgoodreads-20`
         }
       data-auto
       >
