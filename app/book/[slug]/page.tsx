@@ -129,7 +129,9 @@ export default function BookPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-sky-50 to-blue-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-sky-50 to-blue-50 flex items-center justify
+      
+      -center">
         <div className="text-center">
           <Loader2 className="w-16 h-16 animate-spin mx-auto mb-4 text-cyan-600" />
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Loading Book...</h2>

@@ -19,6 +19,10 @@ import {
   Search,
   Sparkles,
   Calendar,
+  Instagram,
+  Facebook,
+  Twitter,
+  Linkedin,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -149,6 +153,9 @@ export default async function LandingPage() {
               </Link>
               <Link href="#testimonials" className="text-gray-700 hover:text-cyan-600 transition-colors">
                 Reviews
+              </Link>
+              <Link href="/about" className="text-gray-700 hover:text-cyan-600 transition-colors">
+                About Us
               </Link>
               <Button
                 asChild
@@ -643,13 +650,13 @@ export default async function LandingPage() {
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
-                  <Users className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" />
                 </div>
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
-                  <MessageSquare className="w-5 h-5" />
+                  <Instagram className="w-5 h-5" />
                 </div>
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
-                  <Globe className="w-5 h-5" />
+                  <Facebook className="w-5 h-5" />
                 </div>
               </div>
             </div>
@@ -679,33 +686,33 @@ export default async function LandingPage() {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-lg mb-4">Community</h3>
+              <h3 className="font-semibold text-lg mb-4">Pages</h3>
               <ul className="space-y-3 text-gray-300">
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Reading Groups
+                  <Link href="/about" className="hover:text-white transition-colors">
+                    About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Discussions
+                  <Link href="/contact" className="hover:text-white transition-colors">
+                    Contact Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Book Clubs
+                  <Link href="/privacy" className="hover:text-white transition-colors">
+                    Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Author Events
+                  <Link href="/terms" className="hover:text-white transition-colors">
+                    Terms of Service
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 bestgoodreads.com. Connecting readers with extraordinary literature worldwide.</p>
+            <p>&copy; 2025 bestgoodreads.com. is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or one of its affiliates.</p>
           </div>
         </div>
       </footer>
