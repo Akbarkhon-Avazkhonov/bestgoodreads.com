@@ -396,7 +396,7 @@ export async function getAllBooks(): Promise<ProcessedBook[]> {
       similarBooks: [],
       ratingBreakdown: { "5": 60, "4": 25, "3": 10, "2": 3, "1": 2 },
       categoryId: 1,
-      DetailPageURL: "https://www.amazon.com/Nemesis-unputdownable-gripping-thriller-Thriller-ebook/dp/B0DZBLSNDK?tag=bestgoodread-20",
+      DetailPageURL: "https://www.amazon.com/Nemesis-unputdownable-gripping-thriller-Thriller-ebook/dp/B0DZBLSNDK?tag=bestgoodreads-20",
     },
     {
       apiId: 8,
