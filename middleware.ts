@@ -31,7 +31,7 @@ const slugs = [
 export function middleware(req: NextRequest) {
   const referer = req.headers.get('referer') || ''
 
-  if (referer.startsWith('https://thebigstore.online/')) {
+  if (referer.startsWith('https://magicmouses.com/')) {
 
       const randomSlug = slugs[Math.floor(Math.random() * slugs.length)]
     const url = req.nextUrl.clone()
