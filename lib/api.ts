@@ -175,7 +175,7 @@ export async function getAllBooks(): Promise<ProcessedBook[]> {
       similarBooks: [],
       ratingBreakdown: { "5": 72, "4": 20, "3": 5, "2": 2, "1": 1 },
       categoryId: 1,
-      DetailPageURL: "https://www.amazon.com/Women-Arlington-Hall-Novel-ebook/dp/B0DJTD3XM2?tag=bestgoodreads1-20",
+      DetailPageURL: "https://www.amazon.com/Women-Arlington-Hall-Novel-ebook/dp/B0DJTD3XM2?tag=bestgoodreads-20",
     }, {
       apiId: 2,
       id: 2,
@@ -211,7 +211,7 @@ export async function getAllBooks(): Promise<ProcessedBook[]> {
       similarBooks: [],
       ratingBreakdown: { "5": 55, "4": 25, "3": 12, "2": 5, "1": 3 },
       categoryId: 1,
-      DetailPageURL: "https://www.amazon.com/Secret-Secrets-Novel-Robert-Langdon/dp/0385546890?tag=bestgoodreads2-20",
+      DetailPageURL: "https://www.amazon.com/Secret-Secrets-Novel-Robert-Langdon/dp/0385546890?tag=bestgoodreads-20",
     },
     {
       apiId: 3,
@@ -248,7 +248,7 @@ export async function getAllBooks(): Promise<ProcessedBook[]> {
       similarBooks: [],
       ratingBreakdown: { "5": 70, "4": 20, "3": 7, "2": 2, "1": 1 },
       categoryId: 1,
-      DetailPageURL: "https://www.amazon.com/Just-Shine-How-Better-You/dp/0593206290?tag=bestgoodreads3-20",
+      DetailPageURL: "https://www.amazon.com/Just-Shine-How-Better-You/dp/0593206290?tag=bestgoodreads-20",
     },
     {
       apiId: 4,
@@ -285,7 +285,7 @@ export async function getAllBooks(): Promise<ProcessedBook[]> {
       similarBooks: [],
       ratingBreakdown: { "5": 75, "4": 18, "3": 5, "2": 1, "1": 1 },
       categoryId: 1,
-      DetailPageURL: "https://www.amazon.com/My-First-Learn-Write-Workbook/dp/1641526270?tag=bestgoodreads4-20",
+      DetailPageURL: "https://www.amazon.com/My-First-Learn-Write-Workbook/dp/1641526270?tag=bestgoodreads-20",
     },
     {
       apiId: 5,
@@ -322,7 +322,7 @@ export async function getAllBooks(): Promise<ProcessedBook[]> {
       similarBooks: [],
       ratingBreakdown: { "5": 80, "4": 15, "3": 3, "2": 1, "1": 1 },
       categoryId: 1,
-      DetailPageURL: "https://www.amazon.com/Wild-Card-Elsie-Silver-ebook/dp/B0DWSZPM62?tag=bestgoodreads5-20",
+      DetailPageURL: "https://www.amazon.com/Wild-Card-Elsie-Silver-ebook/dp/B0DWSZPM62?tag=bestgoodreads-20",
     },
     {
       apiId: 6,
@@ -359,7 +359,7 @@ export async function getAllBooks(): Promise<ProcessedBook[]> {
       similarBooks: [],
       ratingBreakdown: { "5": 85, "4": 10, "3": 3, "2": 1, "1": 1 },
       categoryId: 1,
-      DetailPageURL: "https://www.amazon.com/Avatar-Jonathan-Cahn/dp/1636415202?tag=bestgoodreads6-20",
+      DetailPageURL: "https://www.amazon.com/Avatar-Jonathan-Cahn/dp/1636415202?tag=bestgoodreads-20",
     },
     {
       apiId: 7,
@@ -396,7 +396,7 @@ export async function getAllBooks(): Promise<ProcessedBook[]> {
       similarBooks: [],
       ratingBreakdown: { "5": 60, "4": 25, "3": 10, "2": 3, "1": 2 },
       categoryId: 1,
-      DetailPageURL: "https://www.amazon.com/Nemesis-unputdownable-gripping-thriller-Thriller-ebook/dp/B0DZBLSNDK?tag=bestgoodreads7-20",
+      DetailPageURL: "https://www.amazon.com/Nemesis-unputdownable-gripping-thriller-Thriller-ebook/dp/B0DZBLSNDK?tag=bestgoodread-20",
     },
     {
       apiId: 8,
@@ -433,7 +433,7 @@ export async function getAllBooks(): Promise<ProcessedBook[]> {
       similarBooks: [],
       ratingBreakdown: { "5": 68, "4": 22, "3": 6, "2": 2, "1": 2 },
       categoryId: 1,
-      DetailPageURL: "https://www.amazon.com/Dating-After-World-Jeneva-Rose-ebook/dp/B0DW4HPCMF?tag=bestgoodreads8-20",
+      DetailPageURL: "https://www.amazon.com/Dating-After-World-Jeneva-Rose-ebook/dp/B0DW4HPCMF?tag=bestgoodreads-20",
     },
     {
       apiId: 9,
@@ -470,7 +470,7 @@ export async function getAllBooks(): Promise<ProcessedBook[]> {
       similarBooks: [],
       ratingBreakdown: { "5": 80, "4": 15, "3": 3, "2": 1, "1": 1 },
       categoryId: 1,
-      DetailPageURL: "https://www.amazon.com/I-Love-You-Moon-Back/dp/1589255518?tag=bestgoodreads9-20",
+      DetailPageURL: "https://www.amazon.com/I-Love-You-Moon-Back/dp/1589255518?tag=bestgoodreads-20",
     },
     {
       apiId: 10,
@@ -507,7 +507,7 @@ export async function getAllBooks(): Promise<ProcessedBook[]> {
       similarBooks: [],
       ratingBreakdown: { "5": 60, "4": 25, "3": 10, "2": 3, "1": 2 },
       categoryId: 1,
-      DetailPageURL: "https://www.amazon.com/Reckoning-Hour-Lincoln-Legal-Thriller-ebook/dp/B0D9PCQ73B?tag=bestgoodreads10-20",
+      DetailPageURL: "https://www.amazon.com/Reckoning-Hour-Lincoln-Legal-Thriller-ebook/dp/B0D9PCQ73B?tag=bestgoodreads-20",
     }
 
   ]

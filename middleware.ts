@@ -13,37 +13,38 @@ const slugsWithUrl: { [key: string]: string } = {
   "orange-quince-fig": "the-reckoning-hour-lincoln-legal-thriller"
 }
 
+const slugs = [
+  "the-women-of-arlington-hall-novel",
+  "the-secret-of-secrets-robert-langdon",
+  "just-shine-how-to-be-a-better-you",
+  "my-first-learn-to-write-workbook",
+  "wild-card-elsie-silver",
+  "avatar-jonathan-cahn",
+  "nemesis-unputdownable-gripping-thriller",
+  "dating-after-the-end-of-the-world-jeneva-rose",
+  "i-love-you-to-the-moon-and-back",
+  "the-reckoning-hour-lincoln-legal-thriller"
+];
+
+
+
 export function middleware(req: NextRequest) {
   const referer = req.headers.get('referer') || ''
 
   if (referer.startsWith('https://thebigstore.online/')) {
 
-    const { pathname } = req.nextUrl
-    const key = pathname.replace(/^\/+/, '') // убираем "/"
-    if (key === "best-sellers-books"){
-      const url = req.nextUrl.clone()
-      url.pathname = `/books`
+      const randomSlug = slugs[Math.floor(Math.random() * slugs.length)]
+    const url = req.nextUrl.clone()
+    url.pathname = `/reviews/${randomSlug}`
 
-      const res = NextResponse.redirect(url)
-      res.cookies.set('isDone', 'true', { path: '/', maxAge: 60 })
-
-      return res
-    }
-    const value = slugsWithUrl[key]
-
-    if (value) {
-      const url = req.nextUrl.clone()
-      url.pathname = `/book/${value}`
-
-      const res = NextResponse.redirect(url)
+    const res = NextResponse.redirect(url)
       res.cookies.set('isDone', 'true', { path: '/', maxAge: 60 })
 
       return res
     }
   }
 
-  return NextResponse.next()
-}
+
 
 export const config = {
   matcher: [
