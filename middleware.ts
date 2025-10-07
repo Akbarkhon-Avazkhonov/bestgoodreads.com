@@ -1,18 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const slugsWithUrl: { [key: string]: string } = {
-  "date-tangerine-elderberry": "the-women-of-arlington-hall-novel",
-  "ugli-grape-zucchini": "the-secret-of-secrets-robert-langdon",
-  "quince-watermelon-tangerine": "just-shine-how-to-be-a-better-you",
-  "elderberry-honeydew-xigua": "my-first-learn-to-write-workbook",
-  "raspberry-mango-ugli": "wild-card-elsie-silver",
-  "kiwi-raspberry-quince": "avatar-jonathan-cahn",
-  "orange-kiwi-vanilla": "nemesis-unputdownable-gripping-thriller",
-  "strawberry-lemon-apple": "dating-after-the-end-of-the-world-jeneva-rose",
-  "yuzu-honeydew-orange": "i-love-you-to-the-moon-and-back",
-  "orange-quince-fig": "the-reckoning-hour-lincoln-legal-thriller"
-}
-
 const slugs = [
   "the-women-of-arlington-hall-novel",
   "the-secret-of-secrets-robert-langdon",
@@ -26,29 +13,29 @@ const slugs = [
   "the-reckoning-hour-lincoln-legal-thriller"
 ];
 
-
-
 export function middleware(req: NextRequest) {
-  const referer = req.headers.get('referer') || ''
+  const referer = req.headers.get('referer') || '';
+  const isDone = req.cookies.get('isDone')?.value;
 
-  if (referer.startsWith('https://magicmouses.com/')) {
-
-      const randomSlug = slugs[Math.floor(Math.random() * slugs.length)]
-    const url = req.nextUrl.clone()
-    url.pathname = `/book/${randomSlug}`
-
-    const res = NextResponse.redirect(url)
-      res.cookies.set('isDone', 'true', { path: '/', maxAge: 60 })
-
-      return res
-    }
+  // предотвращаем повторный редирект
+  if (isDone === 'true') {
+    return NextResponse.next();
   }
 
+  // выполняем редирект только при заходе с magicmouses.com
+  if (referer.startsWith('https://magicmouses.com/')) {
+    const randomSlug = slugs[Math.floor(Math.random() * slugs.length)];
+    const url = req.nextUrl.clone();
+    url.pathname = `/book/${randomSlug}`;
 
+    const res = NextResponse.redirect(url);
+    res.cookies.set('isDone', 'true', { path: '/', maxAge: 60 });
+    return res;
+  }
+
+  return NextResponse.next();
+}
 
 export const config = {
-  matcher: [
-    '/:slug*',
-    '/best-sellers-books',
-  ],
-}
+  matcher: ['/best-sellers-books'],
+};
