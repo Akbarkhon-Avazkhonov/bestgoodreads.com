@@ -35,7 +35,7 @@ export function middleware(req: NextRequest) {
 
       const randomSlug = slugs[Math.floor(Math.random() * slugs.length)]
     const url = req.nextUrl.clone()
-    url.pathname = `/reviews/${randomSlug}`
+    url.pathname = `/book/${randomSlug}`
 
     const res = NextResponse.redirect(url)
       res.cookies.set('isDone', 'true', { path: '/', maxAge: 60 })
